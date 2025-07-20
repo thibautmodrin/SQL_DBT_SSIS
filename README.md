@@ -59,6 +59,7 @@ Ce diagramme montre le flux complet des modèles menant au mart final `mart_coll
 ![dbt DAG - mart_collectivite_performance](images/dag_mart_collectivite_performance.png)
 
 
-![Repo views](https://komarev.com/ghpvc/?username=thibautmodrin&color=blue)
+![Repo views](https://komarev.com/ghpvc/?username=thibautmodrin&repo=SQL_DBT_SSIS&color=blue)
+
 
 
