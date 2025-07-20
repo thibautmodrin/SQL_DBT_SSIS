@@ -23,3 +23,26 @@ Dans un second temps (prochaines étapes), je construirai un **cas pratique comp
 
 ## 📂 Organisation du projet
 
+/models/
+├── staging/                           → Nettoyage des sources brutes
+│   ├── sql_training/                  → Spécifique au schéma source Snowflake
+│   │   ├── stg_collectivite.sql
+│   │   ├── stg_usager.sql
+│   │   ├── stg_levees.sql
+│   │   └── stg_factures.sql
+│   └── sources.yml                    → Déclaration des sources Snowflake
+│
+├── intermediate/                      → Étapes intermédiaires (si besoin, sinon facultatif)
+│   ├── int_usager_levees.sql         → Exemple : usager + déchets consolidés
+│   └── int_collectivite_factures.sql → Exemple : collectivité + factures consolidées
+│
+├── marts/                             → Tables finales métiers
+│   ├── core/                         → Cœur de données pour l'analyse
+│   │   ├── mart_collectivite_usagers.sql
+│   │   ├── mart_collectivite_dechets.sql
+│   │   └── mart_usager_facturation.sql
+│   └── reporting/                    → Tableaux de bord globaux
+│       └── mart_collectivite_performance.sql
+│
+├── schema.yml                         → Documentation + tests pour les models (stg, int, mart)
+└── README.md                          → (optionnel) Documentation projet / diagramme archi
