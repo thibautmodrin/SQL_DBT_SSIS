@@ -48,3 +48,9 @@ Dans un second temps (prochaines étapes), je construirai un **cas pratique comp
 └── README.md                          → (optionnel) Documentation projet / diagramme archi
 
 ```
+## 🖼️ Schéma du DAG dbt (mart_collectivite_performance)
+
+Ce diagramme montre le flux complet des modèles menant au mart final `mart_collectivite_performance` :
+
+![dbt DAG - mart_collectivite_performance](images/dag_mart_collectivite_performance.png)
+
