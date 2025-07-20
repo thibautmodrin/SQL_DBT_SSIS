@@ -1,4 +1,5 @@
 # 🚀 Migration SSIS → Snowflake + dbt
+![SQL](https://img.shields.io/badge/SQL-queries-blue?logo=sqlite)
 ![dbt](https://img.shields.io/badge/dbt-v1.x-orange?logo=dbt)
 ![Snowflake](https://img.shields.io/badge/Snowflake-cloud--data--warehouse-blue?logo=snowflake)
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
@@ -56,4 +57,8 @@ Dans un second temps (prochaines étapes), je construirai un **cas pratique comp
 Ce diagramme montre le flux complet des modèles menant au mart final `mart_collectivite_performance` :
 
 ![dbt DAG - mart_collectivite_performance](images/dag_mart_collectivite_performance.png)
+
+
+![Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fthibautmodrin%2Fdbt-ssis-migration&count_bg=%2379C83D&title_bg=%23555555&icon=github.svg&icon_color=%23FFFFFF&title=views&edge_flat=false)
+
 
