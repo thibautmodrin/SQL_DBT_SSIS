@@ -22,7 +22,7 @@ Dans un second temps (prochaines étapes), je construirai un **cas pratique comp
 ---
 
 ## 📂 Organisation du projet
-
+```markdown
 /models/
 ├── staging/                           → Nettoyage des sources brutes
 │   ├── sql_training/                  → Spécifique au schéma source Snowflake
@@ -46,3 +46,5 @@ Dans un second temps (prochaines étapes), je construirai un **cas pratique comp
 │
 ├── schema.yml                         → Documentation + tests pour les models (stg, int, mart)
 └── README.md                          → (optionnel) Documentation projet / diagramme archi
+
+```
