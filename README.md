@@ -4,6 +4,7 @@
 ![Snowflake](https://img.shields.io/badge/Snowflake-cloud--data--warehouse-blue?logo=snowflake)
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
+![Views](https://visitor-badge.laobi.icu/badge?page_id=thibautmodrin.SQL_DBT_SSIS)
 ## 🌟 Objectif du projet
 
 Ce projet personnel a pour objectif de démontrer comment moderniser un flux ETL traditionnel (par exemple développé avec SSIS) vers une architecture cloud-native basée sur Snowflake et dbt.
@@ -58,7 +59,7 @@ Ce diagramme montre le flux complet des modèles menant au mart final `mart_coll
 
 ![dbt DAG - mart_collectivite_performance](images/dag_mart_collectivite_performance.png)
 
-![Views](https://visitor-badge.laobi.icu/badge?page_id=thibautmodrin.SQL_DBT_SSIS)
+
 
 
 
