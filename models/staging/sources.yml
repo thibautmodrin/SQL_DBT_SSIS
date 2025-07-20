@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: sql_training
+    database: SNOWFLAKE_LEARNING_DB
+    schema: SQL_TRAINING
+    tables:
+      - name: COLLECTIVITE
+      - name: FACTURES
+      - name: LEVEES
+      - name: USAGER
