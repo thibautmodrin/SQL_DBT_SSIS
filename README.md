@@ -1,5 +1,8 @@
 # 🚀 Migration SSIS → Snowflake + dbt
-
+![dbt](https://img.shields.io/badge/dbt-v1.x-orange?logo=dbt)
+![Snowflake](https://img.shields.io/badge/Snowflake-cloud--data--warehouse-blue?logo=snowflake)
+![Status](https://img.shields.io/badge/status-in%20progress-yellow)
+![License: MIT](https://img.shields.io/badge/license-MIT-green)
 ## 🌟 Objectif du projet
 
 Ce projet personnel a pour objectif de démontrer comment moderniser un flux ETL traditionnel (par exemple développé avec SSIS) vers une architecture cloud-native basée sur Snowflake et dbt.
