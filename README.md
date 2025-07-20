@@ -1,5 +1,5 @@
 # 🚀 Migration SSIS → Snowflake + dbt
-![SQL](https://img.shields.io/badge/SQL-queries-blue?logo=sqlite)
+
 ![dbt](https://img.shields.io/badge/dbt-v1.x-orange?logo=dbt)
 ![Snowflake](https://img.shields.io/badge/Snowflake-cloud--data--warehouse-blue?logo=snowflake)
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
