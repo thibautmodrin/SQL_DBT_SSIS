@@ -2,30 +2,105 @@ version: 2
 
 models:
   - name: stg_usager
+    description: "Table source nettoyée des usagers (staging)"
+    config:
+      materialized: view
     columns:
       - name: IdUsager
+        description: "Identifiant unique de l'usager"
         tests: [unique, not_null]
 
   - name: stg_collectivite
+    description: "Table source nettoyée des collectivités (staging)"
+    config:
+      materialized: view
     columns:
       - name: IdCollectivite
+        description: "Identifiant unique de la collectivité"
         tests: [unique, not_null]
 
   - name: stg_levees
+    description: "Table source nettoyée des levées de déchets (staging)"
+    config:
+      materialized: view
     columns:
       - name: IdLevee
+        description: "Identifiant unique de la levée"
         tests: [unique, not_null]
 
   - name: stg_factures
+    description: "Table source nettoyée des factures (staging)"
+    config:
+      materialized: view
     columns:
       - name: IdFacture
+        description: "Identifiant unique de la facture"
         tests: [unique, not_null]
 
+  - name: int_usager_levees
+    description: "Jointure intermédiaire entre usagers et levées"
+    config:
+      materialized: ephemeral
+
+  - name: int_collectivite_factures
+    description: "Jointure intermédiaire entre collectivités et factures"
+    config:
+      materialized: ephemeral
+
   - name: mart_collectivite_usagers
-    description: "Vue agrégée des usagers par collectivité"
+    description: "Vue agrégée du nombre total d’usagers et du nombre d’usagers actifs par collectivité"
+    config:
+      materialized: table
+    columns:
+      - name: IdCollectivite
+        description: "Identifiant de la collectivité"
+      - name: TotalUsagers
+        description: "Nombre total d’usagers"
+      - name: UsagersActifs
+        description: "Nombre d’usagers actifs"
+
   - name: mart_collectivite_dechets
-    description: "Vue agrégée des déchets par collectivité"
+    description: "Vue agrégée des tonnages de déchets collectés par collectivité et par type"
+    config:
+      materialized: table
+    columns:
+      - name: IdCollectivite
+        description: "Identifiant de la collectivité"
+      - name: TypeDechet
+        description: "Type de déchet"
+      - name: TotalPoidsKg
+        description: "Poids total collecté (kg)"
+
   - name: mart_usager_facturation
-    description: "Vue agrégée des factures par usager"
+    description: "Vue agrégée des montants facturés et payés par usager"
+    config:
+      materialized: table
+    columns:
+      - name: IdUsager
+        description: "Identifiant de l’usager"
+      - name: TotalMontantHT
+        description: "Montant total hors taxes"
+      - name: TotalMontantTTC
+        description: "Montant total TTC"
+      - name: NombreFactures
+        description: "Nombre de factures"
+      - name: NombreFacturesPayees
+        description: "Nombre de factures payées"
+
   - name: mart_collectivite_performance
-    description: "Vue performance complète par collectivité"
+    description: "Vue consolidée des performances des collectivités (usagers, déchets, facturation)"
+    config:
+      materialized: table
+    columns:
+      - name: IdCollectivite
+        description: "Identifiant de la collectivité"
+      - name: TotalUsagers
+        description: "Nombre total d’usagers"
+      - name: UsagersActifs
+        description: "Nombre d’usagers actifs"
+      - name: TotalPoidsKg
+        description: "Poids total des déchets collectés (kg)"
+      - name: TotalMontantHT
+        description: "Montant total HT facturé"
+      - name: TauxPaiement
+        description: "Taux de factures payées (%)"
