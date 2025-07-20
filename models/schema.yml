@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_usager
+    columns:
+      - name: IdUsager
+        tests: [unique, not_null]
+
+  - name: stg_collectivite
+    columns:
+      - name: IdCollectivite
+        tests: [unique, not_null]
+
+  - name: stg_levees
+    columns:
+      - name: IdLevee
+        tests: [unique, not_null]
+
+  - name: stg_factures
+    columns:
+      - name: IdFacture
+        tests: [unique, not_null]
+
+  - name: mart_collectivite_usagers
+    description: "Vue agrégée des usagers par collectivité"
+  - name: mart_collectivite_dechets
+    description: "Vue agrégée des déchets par collectivité"
+  - name: mart_usager_facturation
+    description: "Vue agrégée des factures par usager"
+  - name: mart_collectivite_performance
+    description: "Vue performance complète par collectivité"
