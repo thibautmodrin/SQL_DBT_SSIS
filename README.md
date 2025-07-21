@@ -1,6 +1,3 @@
-<<<<<<< thibautmodrin-patch-1
-Welcome to your new dbt project!
-=======
 # 🚀 Migration SSIS → Snowflake + dbt
 
 ![dbt](https://img.shields.io/badge/dbt-v1.x-orange?logo=dbt)
@@ -62,24 +59,3 @@ Voici le graphe de dépendance complet de ce projet dbt, montrant les relations 
 
 ![DAG dbt](images/dag_global.png)
 
-
-
-
-
-
-
->>>>>>> main
-
-### Using the starter project
-
-Try running the following commands:
-- dbt run
-- dbt test
-
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
