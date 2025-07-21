@@ -1,6 +1,6 @@
 
 
-name: 'SQL_SSIS_DBT'
+name: 'DBT'
 version: '1.0.0'
 config-version: 2
 
@@ -23,7 +23,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 
 models:
-  SQL_SSIS_DBT:
+  DBT:
     materialized: view
 
 
