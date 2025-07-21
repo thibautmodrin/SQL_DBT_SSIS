@@ -1,6 +1,3 @@
-<<<<<<< thibautmodrin-patch-1
-Welcome to your new dbt project!
-=======
 # 🚀 Migration SSIS → Snowflake + dbt
 
 ![dbt](https://img.shields.io/badge/dbt-v1.x-orange?logo=dbt)
@@ -56,30 +53,17 @@ Dans un second temps (prochaines étapes), je construirai un **cas pratique comp
 └── README.md                          → (optionnel) Documentation projet / diagramme archi
 
 ```
-## 🗺️ Schéma global (DAG)
+## 🖼️ Schéma du DAG dbt (mart_collectivite_performance)
 
-Voici le graphe de dépendance complet de ce projet dbt, montrant les relations entre les sources, les modèles intermédiaires et les marts finaux.
+Ce diagramme montre le flux complet des modèles menant au mart final `mart_collectivite_performance` :
 
-![DAG dbt](images/dag_global.png)
-
-
+![dbt DAG - mart_collectivite_performance](images/dag_mart_collectivite_performance.png)
 
 
 
 
 
->>>>>>> main
-
-### Using the starter project
-
-Try running the following commands:
-- dbt run
-- dbt test
 
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+
+
